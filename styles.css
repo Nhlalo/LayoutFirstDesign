@@ -91,7 +91,7 @@ input{
   -webkit-appearance: none;
   background-color: var(--input-bg);
   border: 0.1rem solid var(--input-bg);
-  width: max(200px, 65%);
+  width: 65%;
   border-radius: 1rem;
   margin-left: 2rem;
   outline: none;
@@ -372,7 +372,7 @@ flex-direction: column;
     font-size: 1rem;
   }
   input{
-  width: max(50px, 70%);
+  width: 70%;
   height: 1.8rem;
   margin-left: 1rem;
   }
@@ -399,7 +399,7 @@ flex-direction: column;
     margin-right: 0;
   }
   .nav nav div ul li a, .firstSect div p,.announcements p, .trends div{
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 .firstSect{
   margin-right: 0rem;
@@ -411,6 +411,7 @@ main > section > span, main > section:nth-child(2) > div > span{
   display: block;
   text-align: center;
 }
+
 .announcements, .trends{
   max-width: 40ch;
 }
@@ -459,7 +460,9 @@ input{
   margin-left: 0.1rem;
   height: 1.4rem;
 }
-
+.announcements span {
+  font-size: 1.4rem;
+}
 
 
 }
