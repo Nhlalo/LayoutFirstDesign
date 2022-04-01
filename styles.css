@@ -1,0 +1,493 @@
+html{
+  font-size:62.5%;
+  box-sizing: border-box;
+  height: 100%;
+  
+}
+*,*::before,*::after{
+  box-sizing: inherit;
+}
+:root{
+  --main-nav-clr: white;
+  --main-nav-bg: rgb(11, 11, 233);
+  --header-bg: white;
+  --cont-clr: black;
+  --article-bg: rgba(169,169,169,0.7);
+  --article-sect-bg: white;
+  --button-bg:rgb(11, 11, 233);
+  --button-color:white;
+  --input-bg:rgba(169,169,169,0.7);
+  --text-sec-clr: rgba(0,0,0,0.8);
+
+
+}
+
+body{
+  font-size:1.6rem; font-size: 16px;
+  height: 100%;
+  background-color: var(--article-bg);
+  
+}
+
+.mainContainer{
+  display: grid;
+  grid-template: 1fr 1fr 5fr / 1fr 4fr;
+
+
+
+}
+
+header{
+  background-color: var(--header-bg);
+  color: var(--cont-clr);
+  grid-area: 1 / 2 / 2 / 3;
+   display: flex;
+   flex-direction: column;
+   padding: 1rem 2rem;
+}
+header > div:nth-child(1), header > div:nth-child(2){
+ 
+  flex-basis: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header > div:nth-child(1) > div:nth-child(2),header > div:nth-child(2) > div:nth-child(2){
+
+ display: flex;
+ align-items: center;
+}
+header > div:nth-child(2) > div:nth-child(1){
+  display: flex;
+  align-items: center;
+}
+header > div:nth-child(1) > div:nth-child(2) > span, button{
+  margin: 0 2rem;
+}
+
+header > div:nth-child(1) > div:nth-child(1){
+  flex-grow: 1;
+}
+
+
+.identity{
+  margin: 0 2rem;
+  font-size: 1.2rem;
+}
+button{
+  border: none;
+  background-color: var(--button-bg);
+  color: var(--button-color);
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  font-size: 1.2rem;
+
+
+}
+
+input{
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: var(--input-bg);
+  border: 0.1rem solid var(--input-bg);
+  width: max(200px, 65%);
+  border-radius: 1rem;
+  margin-left: 2rem;
+  outline: none;
+
+  
+}
+.fa-question{
+  background-color: white;
+  color: var(--button-bg);
+  width: 1.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 0.3rem;
+}
+.name{
+  font-weight: bold;
+}
+.name2{
+  display: block; 
+  font-size: 1.6rem;
+}
+.nav{
+  background-color: var(--main-nav-bg);
+  color: var(--main-nav-clr);
+  grid-area: 1 / 1 / 4 / 2;
+  padding: 0 2rem;
+}
+.nav .fa{
+  margin-right: 2rem;
+}
+nav  .fa-shield{
+  margin-right: 2.3rem !important;
+}
+nav{
+  margin-top: 4rem;
+
+}
+
+
+nav > div:nth-child(1){
+
+  margin-bottom: 5rem;
+  
+}
+
+
+
+.nav nav div ul{
+ padding: 0;
+  
+}
+.nav nav div ul li{
+  list-style: none;
+  margin: 1rem 0;
+  
+}
+.nav nav div ul li a{
+  text-decoration: none;
+  color: var(--main-nav-clr);
+  font-size: 1.8rem;
+ 
+}
+
+main{
+  background-color: var(--article-bg);
+  color: var(--cont-clr);
+  grid-area: 2 / 2 / 4 / 3 ;
+  display: flex;
+  align-items: center;
+  padding: 3rem 1rem;
+  position: relative;
+}
+
+
+.firstSect{
+  display: grid;
+  grid-template: repeat(3,minmax(150px, 1fr)) / repeat(2, minmax(1px, 1fr));
+  gap: 2rem;
+  margin-right: 4rem;
+  margin-top: 1rem;
+}
+main > section:nth-child(2) > div > p , .firstSect span, main > section > span{
+  font-weight: bold;
+}
+main > section:nth-child(2) > div > span{
+  font-weight: bold;
+  position: relative;
+  bottom: 1.3rem;
+}
+main > section:nth-child(2){
+  position: relative;
+
+  top: 1.7rem;
+  bottom: 0;
+}
+.firstSect div{
+  background-color: yellow;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: right;
+}
+.firstSect div div{
+  background-color: var(--article-sect-bg);
+  padding: 2rem;
+  width: 98%;
+  height: 100%;
+  flex-direction: column;
+
+}
+.firstSect div p{
+  max-width: 45ch;
+  margin: 0;
+  margin-top: 0.5rem;
+  color: var(--text-sec-clr);
+}
+.interactTools span{
+  margin: 0 0.5rem;
+}
+.interactTools span i{
+  opacity: 0.9;
+}
+.firstSect div div .interactTools{
+  
+    flex-direction: row;
+    padding: 0;
+    align-items: end;
+}
+
+ 
+.announcements, .trends{
+  background-color: var(--article-sect-bg);
+  max-width: 38ch;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+.announcements P{
+  margin: 0;
+  margin-top: 1rem;
+}
+.announcements span{
+  font-weight: bold;
+}
+.announcements p, .trends div{
+  font-size: 1.2rem;
+  
+}
+.announcements p{
+  color: var(--text-sec-clr);
+}
+.trends div{
+  display: flex;
+  margin: 0.5rem 0 ;
+}
+img{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+.sharingan{
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  margin-right: 0;
+}
+
+
+
+.trends div div {
+flex-direction: column;
+}
+.trends div div > span:nth-child(1){
+ 
+ margin-bottom: 0.4rem;
+}
+.trends div div > span:nth-child(2){
+ font-size: 1.2rem;
+ color: var(--text-sec-clr);
+}
+
+@media(max-width:1175px){
+  .firstSect{
+    display: grid;
+    grid-template: repeat(3,minmax(150px, 1fr)) / repeat(2, minmax(1px, 300px));
+  }
+  main{
+   justify-content: center;
+  }
+  button{
+   
+    width: 6rem;
+    height: 2rem;
+    border-radius: 9999px;
+    font-size: 1.2rem;
+  
+  
+  }
+  main > section:nth-child(2){
+    position: relative;
+    bottom: 0rem;
+    top: 1.05rem;
+  }
+
+}
+@media(max-width:990px){
+  .firstSect{
+    grid-template: repeat(6,minmax(150px, 1fr)) / repeat(1, minmax(1px, 1fr));
+  }
+  main{
+   align-items: initial;
+  }
+  main > section:nth-child(2){
+    position: relative;
+    bottom: 0rem;
+    top: 0.9rem;
+  }
+  .mainContainer{
+    display: grid;
+    grid-template: 0.5fr 1fr 5fr / 1fr 4fr;
+  
+  
+  
+  }
+  h1{
+    font-size: 3rem;
+  }
+  .nav nav div ul li a, .firstSect div p{
+    font-size: 1.5rem;
+  }
+  .announcements p, .trends div{
+    font-size: 1.3rem;
+  }
+ 
+  header > div:nth-child(1) > div:nth-child(2) > span, button {
+    margin: 0 1rem;
+  }
+  
+  .name,.name2{
+    font-size: 1.5rem;
+  }
+  
+  .identity {
+    
+    font-size: 1.2rem;
+  }
+  .sharingan{
+    width: 3rem;
+    height: 3rem;
+    
+   
+  }
+ 
+}
+@media(max-width:825px){
+  header > div:nth-child(2) > div:nth-child(2){
+    flex-direction: column;
+  }
+  button{
+    margin: 0.1rem 0;
+    width: 6rem;
+    height: 1.5rem;
+  }
+  
+  .sharingan{
+    width: 2rem;
+    height: 2rem;
+  border-radius: 50%;
+   
+  }
+  .name,.name2{
+    font-size: 1.4rem;
+  }
+  .identity {
+    
+      margin: 0 1rem;
+      
+    
+    font-size: 1rem;
+  }
+  input{
+  width: max(50px, 70%);
+  height: 1.8rem;
+  margin-left: 1rem;
+  }
+  header > div:nth-child(1){
+    margin-bottom: 1rem;
+  }
+  .interactTools{
+    margin-top: 0.5rem;
+  }
+  
+ 
+}
+
+@media(max-width:595px){
+  main{
+    flex-direction: column;
+    align-items: center;
+  }
+  section{
+    margin-bottom: 8rem;
+  }
+  main > section:nth-child(1){
+    order: 2;
+    margin-right: 0;
+  }
+  .nav nav div ul li a, .firstSect div p,.announcements p, .trends div{
+    font-size: 1.4rem;
+  }
+.firstSect{
+  margin-right: 0rem;
+}
+main > section:nth-child(2) > div > p{
+  text-align: center;
+}
+main > section > span, main > section:nth-child(2) > div > span{
+  display: block;
+  text-align: center;
+}
+.announcements, .trends{
+  max-width: 40ch;
+}
+
+h1{
+  font-size: 2.4rem;
+}
+.mainContainer{
+  display: grid;
+  grid-template: 0.1fr 1fr 5fr / 1fr 4fr;
+
+
+
+}
+.fa-search, .fa-bell{
+  font-size: 1.3rem;
+}
+.nav .fa {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+.fa-question{
+
+  width: 1rem;
+
+}
+nav  .fa-shield{
+  margin-right: 0.7rem !important;
+}
+.name,.name2{
+  font-size: 1.3rem;
+}
+header > div:nth-child(2) > div:nth-child(1) {
+  flex-direction: column;
+}
+.identity{
+  margin: 0;
+  font-size: 0.9rem;
+}
+header > div:nth-child(2) > div:nth-child(1) {
+
+  align-items: initial;
+}
+
+input{
+  margin-left: 0.1rem;
+  height: 1.4rem;
+}
+
+
+
+}
+@media(max-width:425px){
+  
+  button{
+    margin: 0.1rem 0;
+    width: 5rem;
+    height: 1.5rem;
+    font-size: 1rem;
+  }
+  header > div:nth-child(1) > div:nth-child(2) > span {
+    margin: 0 0.4rem;
+  }
+  .identity{
+    font-size: 0.8rem;
+  }
+  header {
+    padding: 1rem 1rem;
+  }
+  .name,.name2{
+    font-size: 1.1rem;
+  }
+  .interactTools i{
+    font-size: 1.5rem;
+  }
+  .identity{
+    font-size: 0.8rem;
+  }
+ 
+}
